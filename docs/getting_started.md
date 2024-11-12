@@ -8,7 +8,7 @@ permalink: /getting_started
 
 ### Here we provide a guided tutorial on **WISDM**, an open-source package for developing and applying species distribution models (SDMs) and visualizing their outputs.
 
-**WISDM** is a base package for SyncroSim, yet familiarity with SyncroSim is not required to get started with **WISDM**. Throughout the Quickstart tutorial, terminology associated with SyncroSim is italicized, and whenever possible, links are provided to the SyncroSim online documentation. For more on SyncroSim, please refer to the SyncroSim [Overview](https://docs.syncrosim.com/getting_started/overview.html){:target="_blank"} and [Quickstart tutorial](https://docs.syncrosim.com/getting_started/quickstart.html){:target="_blank"}.
+**WISDM** is a base package for SyncroSim, yet familiarity with SyncroSim is not required to get started with **WISDM**. Throughout the Quickstart tutorial, terminology associated with SyncroSim is italicized, and whenever possible, links are provided to the SyncroSim online documentation. For more on SyncroSim, please refer to the SyncroSim [Overview](https://docs.syncrosim.com/getting_started/overview.html) and [Quickstart tutorial](https://docs.syncrosim.com/getting_started/quickstart.html).
 
 <br>
 
@@ -28,7 +28,7 @@ This quickstart tutorial will introduce you to the basics of working with **WISD
 
 Running **WISDM** requires that the SyncroSim software be installed on your computer. Download the latest version of SyncroSim <a href="https://syncrosim.com/download/" target="_blank">here</a> and follow the installation prompts.
 
-**WISDM** is a [*Base Package*](https://docs.syncrosim.com/how_to_guides/package_overview.html){:target="_blank"} within the SyncroSim simulation modeling framework. To install the **WISDM** *Package*, open SyncroSim and select **File** > **Packages** > **Install**, then select the **WISDM** *Package* and click OK.
+**WISDM** is a [*Base Package*](https://docs.syncrosim.com/how_to_guides/package_overview.html) within the SyncroSim simulation modeling framework. To install the **WISDM** *Package*, open SyncroSim and select **File** > **Local Packages** > **Install from Server**, then select the **WISDM** *Package* and click OK.
 
 If you do not have **Miniconda** installed on your computer, a dialog box will open asking if you would like to install Miniconda. Click **Yes**. Once Miniconda is done installing, a dialog box will open asking if you would like to create a new conda environment. Click **Yes**. Note that the process of installing Miniconda and the **WISDM** conda environment can take several minutes. If you choose not to install the conda environment you will need to manually install all required package dependencies.
 
@@ -38,41 +38,41 @@ If you do not have **Miniconda** installed on your computer, a dialog box will o
 
 <p id="step2"> <h2>Step 2: Creating a new <b>WISDM</b> Library</h2> </p>
 
-Having installed the **WISDM** *Package*, you are now ready to create your SyncroSim *Library*. A *Library* is a file (with extension *.ssim*) that contains all your model inputs and outputs. Note that the format of each *Library* is specific to the *Package* for which it was initially created. You can opt to create an empty *Library* or use a template *Library* called **_WISDM Example_**. In this tutorial, we will be working with the **_WISDM Example_** template *Library*. To create a new *Library* from this template, choose **New...** from the **File** menu.
+Having installed the **WISDM** *Package*, you are now ready to create your SyncroSim *Library*. A *Library* is a file (with extension *.ssim*) that contains all your model inputs and outputs. Note that the format of each *Library* is specific to the *Package* for which it was initially created. You can opt to create an empty *Library* or use a template *Library* called **_WISDM Example_**. In this tutorial, we will be working with the **_WISDM Example_** template *Library*. 
 
-<img align="middle" style="padding: 3px" width="499" src="assets/images/template.png">
+To create a new *Library*, choose **New...** from the **File** menu. In the window, name the new library and hit **Save**. The new library should open, but you will still need to activate the **WISDM** package. On the left, in the *Library Explorer* panel, double click or right click the *Library* name and select **Open**. A new panel will open, in the panel click the **General** tab, select **Packages**, then select **Add...**.   
 
-In this window:
+<img align="middle" style="padding: 3px" width="699" src="assets/images/add_packages-V3.png">
 
-* Select the row for **wisdm - Workbench of Integrated Species Distribution Modeling**. Note that as you select a row, the list of *Templates* available and suggested **File name** for that base package are updated.
-* Select the **_WISDM Example_** template as shown above. 
-* Optionally type in a new **File name** for the *Library* (or accept the default); you can also change the **Folder** containing the file using the **Browse…** button. <br>
-* When you are ready to create the Library file, click **OK**. A new *Library* will be created and loaded into the **Library Explorer**.
+Select the desired version of **WISDM** and hit **OK**
+
+<img align="middle" style="padding: 3px" width="699" src="assets/images/select-package-V3.png">
 
 <br>
 
 <p id="step3"> <h2>Step 3: Viewing model inputs</h2> </p>
 
-The contents of your newly created Library are now displayed in the **Library Explorer**. The *Library* stores information on three levels: the *Library*, the *Project*, and the *Scenarios*. 
+The contents of your newly created Library are now displayed in the **Library Explorer**. The *Library* stores information on three, nested levels: the *Library*, the *Project*, and the *Scenarios*. 
 
-Most model inputs in SyncroSim are organized into *Scenarios*, where each *Scenario* consists of a suite of *Properties*, one for each of the model’s required inputs. Because you chose the **_WISDM Example_** when you created your *Library*, your Library already contains a demonstration *Scenario* with pre-configured model inputs and outputs. 
+Most model inputs in SyncroSim are organized into *Scenarios*, where each *Scenario* consists of a suite of *Properties*, one for each of the model’s required inputs. To follow along with the rest of the walk-through, please download and open the **WISDM Example** [*Library*](https://cloud.syncrosim.com/dromualdi/WISDM%20Example/map/3?variable=wisdm_ProbabilityMapMean&timestep=1&scenario=4). This scenario demonstrates habitat suitability modeling for Brewer's Sparrow. In this example, the *Library* is called **WISDM Example**, the *Project* is called **Definitions**, and the *Scenario* is called **_Brewer's Sparrow_**. 
 
-<img align="middle" style="padding: 3px" width="294" src="assets/images/scenario.png">
+<img align="middle" style="padding: 3px" width="499" src="assets/images/scenario-V3.png">
 
 To view the details of the *Scenario*:
 
 * Select the scenario named **_Brewer's Sparrow_** in the **Library Explorer**.
-* Right-click and choose **Properties** from the context menu to view the details of the Scenario.
+* Right-click and choose **Open** from the context menu to view the details of the Scenario.
 
 This opens the *Scenario Properties* window.
 
-<img align="middle" style="padding: 3px" width="550" src="assets/images/scenario-properties.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/scenario-properties-V3.png">
+
 
 <br>
 
 ### Pipeline
 
-Located underneath the **General** tab, the model **Pipeline** allows you to select which stages of the model to include in the model run and their run order. A full run of **WISDM** consists of six to nine stages: (1) Create multiprocessing tiles (optional); (2) Prepare spatial data; (3) Prepare site data; (4) Generate background sites (optional); (5) Prepare training and testing data; (6) Variable reduction; (7) Fit statistical model(s); (8) Apply the model(s); (9) Ensemble the models (optional). The following list represents all possible *Pipeline* elements. In this example, however, we will only run two statistical models in Stage 7:
+Located underneath the **_General_** tab, the model **_Pipeline_** allows you to select which stages to include in the model run and their run order. A full run of **WISDM** consists of six to nine stages: (1) Create multiprocessing tiles (optional); (2) Prepare spatial data; (3) Prepare site data; (4) Generate background sites (optional); (5) Prepare training and testing data; (6) Variable reduction; (7) Fit statistical model(s); (8) Apply the model(s); (9) Ensemble the models (optional). The following list represents all possible *Pipeline* elements. In this example, however, we will only run two statistical models in Stage 7:
 
 * Stage 1: Prepare Multiprocessing (optional)
 * Stage 2: Spatial Data Preparation
@@ -89,19 +89,24 @@ Located underneath the **General** tab, the model **Pipeline** allows you to sel
 
 Note that all stages in this *Pipeline* are dependent on the results of the previous stage. You cannot run a stage without having first run the previous required stages (optional stages can be skipped). However, you can choose to fit your data to any number of the statistical models available for Stage 7 (i.e., GLM, Random Forest, or Maxent). In this example, GLM and Random Forest have been selected and added to the *Pipeline*.  
 
-<img align="middle" style="padding: 3px" width="470" src="assets/images/pipeline-models.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/pipeline-models-V3.png">
 
+
+
+In some cases you may want to run a subset of the *Pipeline*. This is possible through the creation of multiple *Scenarios*, which include previous *Scenarios* as dependencies. For example, you may split the stages up so that *Scenario 1* includes stages 1 and 2 while *Scenario 2* included stages 3-9. To include *Scenario 1* as a dependency for *Scenario 2*, in the **Library Explorer** drag and drop *Scenario 1* down to *Scenario 2*. Click the arrow next to *Scenario 2*, then click the arrow next to **Dependencies**, you should see *Scenario 1* now listed here.    
+
+<img align="middle" style="padding: 3px" width="350" src="assets/images/splitting-pipeline-V3.png">
 <br>
 
 ### Spatial Multiprocessing Inputs
 
-Under the **Data Preparation** tab, you'll find the **Template Raster** datasheet. Here, you'll provide the system path to a *Raster File* with the desired extent, resolution, and coordinate reference system (CRS) for the analysis and outputs. This **Template Raster** is required for multiple stages in the *Pipeline*, including the optional Prepare Multiprocessing stage. 
+Under the **WISDM** tab, you'll find the **Template Raster** datasheet. Here, you'll provide the system path to a *Raster File* with the desired extent, resolution, and coordinate reference system (CRS) for the analysis and outputs. This **Template Raster** is required for multiple stages in the *Pipeline*, including the optional Prepare Multiprocessing stage. 
 
 If you are choosing to run with Spatial Multiprocessing, you can also specify the *Number of Multiprocessing Tiles* that you would like to use. If you don't specify a value, the package will select an appropriate value for you. 
 
-If spatial multiprocessing is used, a tiling raster will be created and will appear in the **Spatial Multiprocessing** datasheet when the **Scenario** has finished running. This tiling raster is used to clip other spatial layers into smaller rectangular blocks, effectively creating more manageable processing sizes.
+If Spatial Multiprocessing is used, a tiling raster will be created and will appear in the **Spatial Multiprocessing** datasheet when the **Scenario** has finished running. This tiling raster is used to clip other spatial layers into smaller rectangular blocks, effectively creating more manageable processing sizes.
 
-<img align="middle" style="padding: 3px" width="579" src="assets/images/template-raster.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/template-raster-V3.png">
 
 Note that Stage 1 (Prepare Multiprocessing) only needs to be added to the *Pipeline* and run if spatial multiprocessing is required (i.e., for large landscapes and/or high resolution data). In this example, we will use spatial multiprocessing for demonstration purposes. 
 
@@ -109,31 +114,31 @@ Note that Stage 1 (Prepare Multiprocessing) only needs to be added to the *Pipel
 
 ### Spatial Data Inputs
 
-Under the **Project Properties**, which you can view by double-clicking in the **Library Explorer** window, in the *Project* called *Definitions*, you'll find the **Covariates** datasheet. Here, you must list the names of all covariates you want to consider for model development.
+In the **Library Explorer** window, double click **Definitions**, to open the **Definitions** window. Under the **WISDM** tab, you'll find the **Covariates** datasheet. Here, you must list the names of all covariates you want to consider for model development, before trying to load covariate rasters.
 
-<img align="middle" style="padding: 3px" width="657" src="assets/images/covariates.png">
+<img align="middle" style="padding: 3px" width="799" src="assets/images/covariates-V3.png">
 
 If you return to the **Scenario Properties**, under the **Data Preparation** tab, you'll also find a datasheet called **Covariate Data**. Here, you will identify system paths to the raster files (e.g., GEOTiffs) for each covariate listed in the **Covariates** datasheet above. The extent of each raster must be greater than or equal to the template raster extent.
 
-<img align="middle" style="padding: 3px" width="582" src="assets/images/covariate-data.png">
+<img align="middle" style="padding: 3px" width="799" src="assets/images/covariate-data-V3.png">
 
-Below the **Covariate Data** datasheet, you will see a **Restriction Raster** datasheet. This is an optional input, where you can specify a file path to a raster that will be used to multiply the probability raster during the apply model stage. The **Restriction Raster** is often binary, with the value of 0 indicating areas where occurrence probability will be reduced to zero. In addition to providing a file, you can provide a brief description of the **Restriction Raster** used.
+Below the **Covariate Data** *datasheet*, you will see a **Restriction Raster** *datasheet*. This is an optional input, where you can specify a file path to a raster that will be used to multiply the probability raster during the apply model stage. The **Restriction Raster** is often binary, with the value of 0 indicating areas where occurrence probability will be reduced to zero. In addition to providing a file, you can provide a brief description of the **Restriction Raster** used.
 
 
 
-In the same **Data Preparation** tab, you'll also find a **Field Data** datasheet. Here, you will identify site locations by their X and Y coordinates and include response values for the target species. Response values can be provided as presence-only (1), presence/absence (1 or 0), or counts (integers >= 0).  
+In the same **Data Preparation** tab, you'll also find a **Field Data** *datasheet*. Here, you will identify site locations by their X and Y coordinates and include response values for the target species. Response values can be provided as presence-only (1), presence/absence (1 or 0), presence/background (1 or -9998), or counts (integers >= 0).  
 
-<img align="middle" style="padding: 3px" width="494" src="assets/images/field-data.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/field-data-V3.png">
 
 By default, **WISDM** assumes that the field data coordinates are provided in the template raster's reference system. If the coordinates are provided in an alternate coordinate reference system, the corresponding authority code should be entered under the field data **Field Data Options** datasheet. 
 
-<img align="middle" style="padding: 3px" width="498" src="assets/images/field-data-options.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/field-data-options-V3.png">
 
 The *Aggregate or Weight Data* input gives you the option to handle redundancy and avoid pseudo-replication by either aggregating field data locations so only one field data observation is represented per pixel or proportionately down-weighting pixels with multiple points. If the input is left blank, all field data points will be retained without aggregation or weighting.
 
-If the *Background Data Generation* stage is included in the Scenario *Pipeline*, the **Background Data Options** datasheet will be visible below the **Field Data Options** datasheet. Here, you can identify preferences for background site or pseudo-absence generation, such as whether background sites should be generated, the number of sites that should be generated, the method used for generation, KDE (kernel density estimation) background surface method, and the isopleth threshold used for binary mask creation. This datasheet is optional and is left blank for the purposes of this tutorial.
+If the *Background Data Generation* stage is included in the Scenario *Pipeline*, the **Background Data Options** *datasheet* will be visible below the **Field Data Options** *datasheet*. This *datasheet* is optional and is left blank for the purposes of this tutorial, however, an example image is shown below. Here, you can identify preferences for background site or pseudo-absence generation, such as whether background sites should be generated, the number of sites that should be generated, the method used for generation, KDE (kernel density estimation) background surface method, and the isopleth threshold used for binary mask creation. 
 
-
+<img align="middle" style="padding: 3px" width="699" src="assets/images/background-points-V3.png">
 
 <br>
 
@@ -141,37 +146,41 @@ If the *Background Data Generation* stage is included in the Scenario *Pipeline*
 
 Still under the **Data Preparation** tab, you'll find the **Validation Options** datasheet. Here, you'll indicate if data should be split into training and testing datasets and the proportion of data that should be used for training. If left blank all data is used for training and no data is reserved for testing. In this datasheet, you can also indicate if cross validation (CV) should be used, the number of CV folds the data should be split into (the default is 10), and if the data in the folds should be stratified by the response (i.e., relatively equal representation of the response variables in each fold). If *Use cross validation for model selection* is left blank, cross validation will not run.  
 
-<img align="middle" style="padding: 3px" width="496" src="assets/images/validation-options.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/validation-options-V3.png">
 
 <br>
 
 ### Statistical Models
 
-In the **Models** tab, you'll find the **GLM**, **Random Forest**, and **Maxent** datasheets. Depending on which statistical models you included in your *Pipeline*, you can access the corresponding model configuration datasheet here and customize your desired statistical analysis. If fields are left blank, default values will be used. 
+In the **Models** tab, you'll find the **Generalized Linear Model** and **Random Forest** datasheets. Depending on which statistical models you included in your *Pipeline*, you can access the corresponding model configuration datasheet here and customize your desired statistical analysis. If fields are left blank, default values will be used. 
 
-<img align="middle" style="padding: 3px" width="410" src="assets/images/GLM.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/glm-V3.png">
 
 <br> 
 
 ### Output Options
 
-In the **Output Options** datasheet, you can choose which output maps to generate. Five output options are available for selection: (1) Probability Map, (2) Binary Map, (3) Residuals Map, (4) Multivariate Environmental Similarity Surface (MESS) Map, and (5) Most Dissimilar Variable (MoD) Map. Choosing at least one option is required to produce output maps. If this datasheet is left blank, the probability map will be generated by default and all other maps will not be generated. 
+In the **Output Options** datasheet, you can choose which output maps to generate. Six output options are available for selection: (1) Probability Map, (2) Binary Map, (3) Binary Threshold, (4) Residuals Map, (5) Multivariate Environmental Similarity Surface (MESS) Map, and (6) Most Dissimilar Variable (MoD) Map. Choosing at least one option is required to produce output maps. If this datasheet is left blank, the probability map will be generated by default and all other maps will not be generated. 
 
-<img align="middle" style="padding: 3px" width="659" src="assets/images/output-options.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/output-options-V3.png">
 
 <br>
 
 <p id="step4"> <h2>Step 4: Running models</h2> </p>
 
-Right-click on the **_Brewer's Sparrow Scenario_** in the **Scenario Manager** window and select **Run** from the context menu. If prompted to save your project, click **Yes**. 
+Right-click on the **_Brewer's Sparrow Scenario_** in the **Library Explorer** window and select **Run** from the context menu. If prompted to save your project, click **Yes**. Running the *Scenario* will take several minutes.
 
 During the model run, the **Covariate Correlation Viewer** window will open in your default browser, showing correlations between *Covariates*. Here, you can manually remove covariates from consideration based on user interpretation (e.g., if the correlation values are deemed unacceptable). To remove a *Covariate*, uncheck the box next to the variable name in the *Covariates to include* list. A default threshold correlation value of |0.7| (highest of Spearman, Pearson, Kendall) is used to color code the correlation values. This value, and the number of plots shown, can be changed. To view  changes, simply select the *Update* button. Once you are satisfied with your list of covariates, select the *Save & Close* button. The window will close and the analysis will continue in Syncrosim.
 
-<img align="middle" style="padding: 3px" width="869" src="assets/images/correlation-viewer.png">
+<img align="middle" style="padding: 3px" width="869" src="assets/images/correlation-viewer-V3.png">
 
 The example model run should complete within a couple of minutes. If the run is successful, you will see a Status of **Done** in the **Run Monitor** window. If the run fails, you can click on the **Run Log** link to see a report of any problems that occurred.
 
-<img align="middle" style="padding: 3px" width="700" src="assets/images/run-monitor.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/run-monitor-V3.png">
+
+The run log can also be pulled up by clicking the arrow next to **Brewer's Sparrow**, then opening the **Results** folder, and right clicking on the individual run, in this case **[4] Brewer's Sparrow**. Select **Run Log** from this menu to re-open the **Run Log**. 
+
+<img align="middle" style="padding: 3px" width="399" src="assets/images/run-log-reopeN-V3.png">
 
 <br>
 
@@ -181,37 +190,36 @@ Once the run is complete, you can view the details of the *Result Scenario*:
 
 * Select **_Brewer's Sparrow Result Scenario_** from the *Results* folder nested under the **_Brewer's Sparrow Scenario_** in the **Library Explorer**.
 
-<img align="middle" style="padding: 3px" width="292" src="assets/images/result-scenario.png">
+* Right-click and choose **Open** from the context menu to view the details of the *Result Scenario*.
 
-* Right-click and choose **Properties** from the context menu to view the details of the *Result Scenario*.
-
-<img align="middle" style="padding: 3px" width="631" src="assets/images/result-scenario-properties.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/result-scenario-properties-V3.png">
 
 This opens the *Result Scenario Properties* window. The format of the *Result Scenario Properties* is similar to the *Scenario Properties* but contains read-only datasheets with updated information produced during the model run.
 
 You can look through the *Result Scenario* to see the updated or newly populated datasheets. You should find that the **Field Data**, **Covariate Data**, **GLM**, and **Random Forest** datasheets have updated entries. Note that the model configuration options for **Random Forest** were left empty in the *Parent Scenario*. In this case, **WISDM** uses default settings during model fitting and reports the selections in the *Result Scenario*.
 
-<img align="middle" style="padding: 3px" width="442" src="assets/images/random-forest-output.png">
+<img align="middle" style="padding: 3px" width="699" src="assets/images/random-forest-output-V3.png">
+
 
 <br>
 
 ### Data Preparation Outputs
 
-The **Field Data** datasheet has also been updated to only include training data and background (pseudo-absence) sites inside the extent of the *template raster*. In the **Options** datasheet, if weight was selected, the *Weights* column will also be populated. If aggregate was selected, records with -9999 may occur in the *Response* column, this indicates redundancy, and these records will be removed from model fitting. The *Use In Model Evaluation* and *Model Selection Split* columns will also be populated based on selections defined in the **Validation Options** datasheet. The *Use in Model Evaluation* column indicates which sites were used for model training and testing. A **Yes** in this column means that the site was reserved for model evaluation (i.e., testing) and was not used during model fitting (i.e., training). The *Model Selection Split* column indicates how the training data has been spilt for cross validation. This column is only populated if *Use cross validation for model selection* was chosen under **Validation Options**, and will display the cross-validation fold assigned to each site. 
+The **Field Data** datasheet has also been updated to only include training data and background (pseudo-absence) sites inside the extent of the *template raster*. In the **Options** datasheet, if weight was selected, the *Weights* column will also be populated. If aggregate was selected, records with -9999 may occur in the *Response* column, this indicates redundancy, and these records will be removed from model fitting. The *Use In Model Evaluation* and *Model Selection Split* columns will also be populated based on selections defined in the **Validation Options** *datasheet*. The *Use in Model Evaluation* column indicates which sites were used for model training and testing. A **Yes** in this column means that the site was reserved for model evaluation (i.e., testing) and was not used during model fitting (i.e., training). The *Model Selection Split* column indicates how the training data has been spilt for cross validation. This column is only populated if *Use cross validation for model selection* was chosen under **Validation Options**, and will display the cross-validation fold assigned to each site. 
 
-<img align="middle" style="padding: 3px" width="713" src="assets/images/field-data-output.png">
+<img align="middle" style="padding: 3px" width="800" src="assets/images/field-data-output-V3.png">
 
 <br>
 
 Back in the **Covariate Data** datasheet, you'll find that all your input rasters have been replaced by clipped, reprojected, and resampled rasters that match the properties of your **Template Raster** (extent, CRS, spatial resolution). The *Resample Method* and *Aggregation Method* columns have been populated with default values to indicate which approach was used to prepare the data.
 
-<img align="middle" style="padding: 3px" width="716" src="assets/images/covariate-data-output.png">
+<img align="middle" style="padding: 3px" width="716" src="assets/images/covariate-data-output-V3.png">
 
-<br>
 
-In the *Results Scenario* you should also find that the **Spatial Multiprocessing** datasheet under the **Data Preparation** tab has been populated, along with the **Site Data** and **Retained Covariate List** datasheets under the **Variable Reduction** tab.  
 
-Since we opted for multiprocessing, we can see that a tiling raster has been created and added to the **Spatial Multiprocessing** datasheet. This tiling raster is used to clip other spatial layers into smaller rectangular blocks, effectively creating more manageable processing sizes. 
+ Under the **WISDM** tab and sub-tab **Variable Reduction** the **Site Data** and **Retained Covariate List** datasheets should also have updated.  
+
+Since multiprocessing was selected, a tiling raster has been created and added to the **Spatial Multiprocessing** datasheet under the **System** tab. This tiling raster is used to clip other spatial layers into smaller rectangular blocks, effectively creating more manageable processing sizes. 
 
 **Site Data** is an output of the *Site Data Preparation* stage of the *Pipeline* and provides site specific values for each covariate. The **Retained Covariate List** is an output of the *Variable Reduction* stage of the *Pipeline* and lists the candidate variables that were considered during model fitting.
 
@@ -221,21 +229,22 @@ Since we opted for multiprocessing, we can see that a tiling raster has been cre
 
 To view spatial outputs, move to the results panel at the bottom left of the **Library Explorer** window. Under the **Maps** tab, double-click on **Map Outputs** to visualize the map.
 
-<img align="middle" style="padding: 3px" width="292" src="assets/images/library-explorer-maps.png">
+<img align="middle" style="padding: 3px" width="292" src="assets/images/library-explorer-maps-V3.png">
 
-The first two maps are *Probability* maps showing model-predicted habitat suitability values in geographic space. Values in the legend on the left-hand side of the screen represent probabilities as percentages. The two maps represent outputs using *GLM* and *Random Forest* statistical analyses. One map will be visible for each modeling approach.
+The first two maps are *Probability* maps showing model-predicted habitat suitability values in geographic space. Values in the legend on the left-hand side of the screen represent probabilities as percentages. The two maps represent outputs using *GLM* and *Random Forest* statistical analyses. One map will be visible for each modeling approach. MESS maps showing areas of model extrapolation, where values for predictors are outside of the range of the training data, are also produced.
 
-<img align="middle" style="padding: 3px" width="939" src="assets/images/map-outputs.png">
+<img align="middle" style="padding: 3px" width="939" src="assets/images/map-outputs-V3.png">
 
-Under the **Map Outputs** tab, you will also find the **Model Outputs** tab. Outputs include *Response Curves*, *Standard Residuals*, *Residuals Smooth*, *Calibration*, *ROC/AUC*, *AUCPR*, *Confusion Matrix*, and *Variable Importance*. These outputs provide information on model performance and offer quick comparison of different statistical models. 
 
-<img align="middle" style="padding: 3px" width="799" src="assets/images/model-outputs.png">
+Under the **Images** tab, you will also find the **Model Outputs** tab. Outputs include *Response Curves*, *Standard Residuals*, *Residuals Smooth*, *Calibration*, *ROC/AUC*, *AUCPR*, *Confusion Matrix*, and *Variable Importance*. These outputs provide information on model performance and offer quick comparison of different statistical models. 
+
+<img align="middle" style="padding: 3px" width="939" src="assets/images/model-outputs-v3.png">
 
 <br>
 
 ## Export Data
 
-To export a map or model output created by the **WISDM** package, add the *Result Scenario* with the desired outputs to the results, then open the **Export** tab at the bottom of the screen. All available files for export will be listed. To export, simply double-click on the desired output and choose the directory in which to save the file in the pop-up window. Note that if multiple *Result Scenarios* are included in the active *Result Scenarios*, files for each of the selected scenarios will be exported. 
+To export a map or model output created by the **WISDM** package, click the *Result Scenario* then select the **Export** tab at the bottom of the screen. All available files for export will be listed. To export, simply double-click on the desired output and choose the directory in which to save the file in the pop-up window. Note that if multiple *Result Scenarios* are included in the active *Result Scenarios*, files for each of the selected scenarios will be exported. 
 
-<img align="middle" style="padding: 3px" width="293" src="assets/images/export.png">
+<img align="middle" style="padding: 3px" width="293" src="assets/images/export-v3.png">
 
